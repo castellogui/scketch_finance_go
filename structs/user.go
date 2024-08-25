@@ -1,7 +1,7 @@
 package structs
 
 import (
-	"time"
+    "database/sql"
 
 	"github.com/google/uuid"
 )
@@ -13,10 +13,10 @@ type User struct {
 	Email      string
 	Password   string
 	CreatedBy  uuid.UUID
-	CreatedAt  time.Time
+	CreatedAt  sql.NullTime
 	UpdatedBy  uuid.UUID
-	UpdatedAt  time.Time
+	UpdatedAt  sql.NullTime
 	Deleted    bool
 	DeletedBy  uuid.UUID
-	DeletedAt  time.Time
+	DeletedAt  sql.NullTime
 }
